@@ -1,0 +1,207 @@
+
+/* Catppuccin Mocha — soft, minimal, pill modules
+   Works with the config.jsonc above. */
+
+/* base */
+* {
+  border: none;
+  font-family: "JetBrainsMonoNL Nerd Font";
+  min-height: 0;
+  font-size: 15px;
+}
+
+/* Catppuccin Mocha colors */
+@define-color base    #1e1e2e;
+@define-color mantle  #181825;
+@define-color crust   #11111b;
+
+@define-color text    #cdd6f4;
+@define-color sub0    #a6adc8;
+@define-color sub1    #bac2de;
+
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+
+@define-color lavender #b4befe;
+@define-color blue     #89b4fa;
+@define-color sapphire #74c7ec;
+@define-color sky      #89dceb;
+@define-color teal     #94e2d5;
+@define-color green    #a6e3a1;
+@define-color yellow   #f9e2af;
+@define-color peach    #fab387;
+@define-color maroon   #eba0ac;
+@define-color red      #f38ba8;
+@define-color pink     #f5c2e7;
+@define-color mauve    #cba6f7;
+
+/* bar */
+window#waybar {
+  background-color: @mantle;
+  border-radius: 10px;
+  padding: 3px 12px;
+  margin: 4px 8px 4px 8px;
+}
+
+/* UNIVERSAL PILL STYLE (corrected selectors) */
+#custom-logo,
+#custom-omarchy,
+#custom-power,
+#workspaces button,
+#clock,
+#custom-weather,
+#network,
+#network.icon,
+#pulseaudio,
+#wireplumber,
+#battery,
+#backlight,
+#memory,
+#mpris,
+#tray,
+#custom-expand-icon,
+#window,
+#custom-screenrecording-indicator,
+.tray-group-item {
+  background-color: @surface0;
+  color: @text;
+  padding: 4px 12px;
+  margin: 6px 3px;
+  border-radius: 6px;
+}
+
+/* workspaces */
+#workspaces {
+  background-color: transparent;
+}
+#workspaces button {
+  all: initial;
+  min-width: 0;
+  padding: 4px 10px;
+  margin: 4px 3px;
+  border-radius: 4px;
+  background-color: @surface0;
+  color: @sub1;
+}
+#workspaces button.active {
+  background-color: @blue;
+  color: @crust;
+}
+#workspaces button:hover {
+  background-color: @surface1;
+  color: @text;
+}
+#workspaces button.urgent {
+  background-color: @red;
+  color: @crust;
+}
+
+/* left logo */
+#custom-logo {
+  padding-left: 18px;
+  margin-left: 6px;
+  border-radius: 6px;
+  color: @sapphire;
+}
+
+/* memory */
+#memory {
+  background-color: @peach;
+  color: @crust;
+}
+
+/* battery */
+#battery {
+  background-color: @red;
+  color: @crust;
+}
+#battery.charging {
+  background-color: @green;
+  color: @crust;
+}
+#battery.warning,
+#battery.critical {
+  background-color: @red;
+  color: @crust;
+}
+
+/* backlight */
+#backlight {
+  background-color: @peach;
+  color: @crust;
+}
+
+/* wireplumber / pulseaudio */
+#wireplumber,
+#pulseaudio {
+  background-color: @mauve;
+  color: @crust;
+}
+
+/* network */
+#network,
+#network.icon {
+  background-color: @teal;
+  color: @crust;
+  padding-right: 12px;
+}
+
+/* clock */
+#clock {
+  background-color: @lavender;
+  color: @crust;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+/* custom power */
+#custom-power {
+  background-color: @surface1;
+  color: @text;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* mpris */
+#mpris {
+  background-color: @surface1;
+  color: @text;
+}
+
+/* tray expander icon */
+#custom-expand-icon {
+  background-color: @surface1;
+  color: @mauve;
+}
+
+/* tray drawer items */
+.tray-group-item {
+  background-color: @surface1;
+  color: @text;
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+/* window title */
+#window {
+  background-color: transparent;
+  color: @sky;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* screen-record indicator */
+#custom-screenrecording-indicator.active {
+  background-color: @red;
+  color: @crust;
+}
+
+/* tooltip */
+tooltip {
+  background-color: @surface1;
+  color: @text;
+  border-radius: 8px;
+  padding: 8px;
+}
+
