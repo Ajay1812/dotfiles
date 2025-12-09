@@ -1,7 +1,8 @@
 # If not running interactively, don't do anything (leave this at the top of this file)
 [[ $- != *i* ]] && return
 
-# All the default Omarchy aliases and functions
+eval "$(oh-my-posh init bash)"
+eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/catppuccin_mocha.omp.json)"
 # (don't mess with these directly, just overwrite them here!)
 source ~/.local/share/omarchy/default/bash/rc
 fastfetch
@@ -26,6 +27,9 @@ alias gc="git commit -m"
 alias gp="git push -u origin main"
 alias gs="git status"
 
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 # ani-cli
 ac() {
   if ! command -v ani-cli >/dev/null 2>&1; then
@@ -117,7 +121,7 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
 export PATH=$PATH:/home/nf/.spicetify
-
+export PATH=$PATH:/home/nf/.local/bin
 export SPARK_HOME="$HOME/Applications/spark-4.0.1-bin-hadoop3"
 export PATH="$SPARK_HOME/bin:$SPARK_HOME/sbin:$PATH"
 export PYTHONPATH="$SPARK_HOME/python/:$PYTHONPATH"
