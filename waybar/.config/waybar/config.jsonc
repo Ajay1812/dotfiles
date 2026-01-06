@@ -91,6 +91,7 @@
 
   "network#essid": {
     "format": "↓{bandwidthDownBytes} ↑{bandwidthUpBytes}",
+    "interval": 1,
     "tooltip-format": "{ifname} via {gwaddr}\n{signalStrength}%"
   },
 

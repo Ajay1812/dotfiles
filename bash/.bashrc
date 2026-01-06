@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return
 
 eval "$(oh-my-posh init bash)"
-eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/catppuccin_mocha.omp.json)"
+eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/amro.omp.json)"
 # (don't mess with these directly, just overwrite them here!)
 source ~/.local/share/omarchy/default/bash/rc
 fastfetch
@@ -122,11 +122,15 @@ bind '"\e[B": history-search-forward'
 
 export PATH=$PATH:/home/nf/.spicetify
 export PATH=$PATH:/home/nf/.local/bin
-export SPARK_HOME="$HOME/Applications/spark-4.0.1-bin-hadoop3"
-export PATH="$SPARK_HOME/bin:$SPARK_HOME/sbin:$PATH"
-export PYTHONPATH="$SPARK_HOME/python/:$PYTHONPATH"
 
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
-export PATH="$JAVA_HOME/bin:$PATH"
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
+export SPARK_HOME="/opt/spark-3.5.7-bin-hadoop3"
+export PATH="$JAVA_HOME/bin:$SPARK_HOME/bin:$PATH"
 
 . "$HOME/.local/share/../bin/env"
+
+# Added by dbt installer
+export PATH="$PATH:/home/nf/.local/bin"
+
+# dbt aliases
+alias dbtf=/home/nf/.local/bin/dbt
