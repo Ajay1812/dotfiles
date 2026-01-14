@@ -17,7 +17,8 @@
     "group/tray-expander",
     "backlight",
     "network#icon",
-    "pulseaudio"
+    "pulseaudio",
+    "custom/notifications"
   ],
 
   "hyprland/workspaces": {
@@ -185,7 +186,26 @@
     "on-click": "$TERMINAL -e btop"
   },
 
-  "custom/weather": {
+"custom/notifications": {
+    "tooltip": false,
+    "format": "{icon}{0}", // {0} displays the notification count
+    "format-icons": {
+        "notification": "󱅫",
+        "none": "󰂚",
+        "dnd-notification": "󱏧",
+        "dnd-none": "󱏧",
+        "inhibited-notification": "󱅫",
+        "inhibited-none": "󰂚",
+        "dnd-inhibited-notification": "󱏧",
+        "dnd-inhibited-none": "󱏧"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+}, "custom/weather": {
     "format": "{}°",
     "tooltip": true,
     "interval": 600,

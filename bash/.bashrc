@@ -1,8 +1,12 @@
 # If not running interactively, don't do anything (leave this at the top of this file)
 [[ $- != *i* ]] && return
 
-eval "$(oh-my-posh init bash)"
-eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/amro.omp.json)"
+
+# Starship prompt (only engine)
+export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(starship init bash)"
+
 # (don't mess with these directly, just overwrite them here!)
 source ~/.local/share/omarchy/default/bash/rc
 fastfetch
