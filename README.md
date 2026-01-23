@@ -1,6 +1,6 @@
 # Dotfiles
 
-My personal Linux dotfiles for a consistent development environment.
+My Omarchy dotfiles for a consistent development environment.
 
 #### Screenshots
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/06dcc6ef-62e8-4a06-998c-bd4b3cab6b95" />
